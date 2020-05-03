@@ -21,43 +21,55 @@ namespace Percentage_Calculator
 
 
 
-            Double value = Convert.ToDouble(args[0]);
-            getCube(value);
+            //Double value = Convert.ToDouble(args[0]);
+           // getCube(value);
+
+            Double value  = Convert.ToDouble(args[0]);
+            Double divisorvalue = Convert.ToDouble(args[1]);
+            getdivision(value, divisorvalue);
         }
 
 
         //static void getPercentage(Decimal totalValue, Decimal percentage)
         //{
-            //Decimal result = 0;
-            //result = (percentage * totalValue) / 100;
-            //Console.WriteLine(percentage + "percentage of " + totalValue + " is = $" + result);
-            //Console.ReadLine();
+        //Decimal result = 0;
+        //result = (percentage * totalValue) / 100;
+        //Console.WriteLine(percentage + "percentage of " + totalValue + " is = $" + result);
+        //Console.ReadLine();
 
         //}
 
         //static void getSquareRoot(Double squareValue)
         //{
-            //Double result = 0;
-            //result = Math.Sqrt(squareValue);
-            //Console.WriteLine(squareValue + " Squre root is = " + result);
-            //Console.ReadLine();
+        //Double result = 0;
+        //result = Math.Sqrt(squareValue);
+        //Console.WriteLine(squareValue + " Squre root is = " + result);
+        //Console.ReadLine();
 
         //}
 
-            
+
         static void getCube(Double value)
         {
-            Double  result = 0;
+            Double result = 0;
             result = value * value * value;
-            Console.WriteLine( " You entered : " + value + " and the cube of " + value + " is =" + result);
+            Console.WriteLine(" You entered : " + value + " and the cube of " + value + " is =" + result);
             Console.ReadLine();
 
         }
-            
 
 
 
 
+        static void getdivision(Double value, Double divisorvalue)
+        {
+            Double result = 0;
+            result = (value / divisorvalue);
+            Console.WriteLine("You questioned me what is  " + value + " divided by " + divisorvalue + " and the answer is = " + result);
+            Console.ReadLine();
+        
+        
+        }
 }
 
 
