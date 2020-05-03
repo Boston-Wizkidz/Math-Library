@@ -49,7 +49,7 @@ namespace Percentage_Calculator
         {
             Double  result = 0;
             result = value * value * value;
-            Console.WriteLine( value + " Cube is = " + result);
+            Console.WriteLine( " You entered : " + value + " and the cube of " + value + " is =" + result);
             Console.ReadLine();
 
         }
