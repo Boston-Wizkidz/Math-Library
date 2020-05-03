@@ -16,29 +16,52 @@ namespace Percentage_Calculator
             //getPercentage(totalValue, percentage);
 
 
-            Double squreValue = Convert.ToDouble(args[0]);
-            getSquareRoot(squreValue);
+            //Double squreValue = Convert.ToDouble(args[0]);
+            //getSquareRoot(squreValue);
 
 
+
+            Double value = Convert.ToDouble(args[0]);
+            getCube(value);
         }
 
 
-        static void getPercentage(Decimal totalValue, Decimal percentage)
+        //static void getPercentage(Decimal totalValue, Decimal percentage)
+        //{
+            //Decimal result = 0;
+            //result = (percentage * totalValue) / 100;
+            //Console.WriteLine(percentage + "percentage of " + totalValue + " is = $" + result);
+            //Console.ReadLine();
+
+        //}
+
+        //static void getSquareRoot(Double squareValue)
+        //{
+            //Double result = 0;
+            //result = Math.Sqrt(squareValue);
+            //Console.WriteLine(squareValue + " Squre root is = " + result);
+            //Console.ReadLine();
+
+        //}
+
+            
+        static void getCube(Double value)
         {
-            Decimal result = 0;
-            result = (percentage * totalValue) / 100;
-            Console.WriteLine(percentage + "percentage of " + totalValue + " is = $" + result);
+            Double  result = 0;
+            result = value * value * value;
+            Console.WriteLine( value + " Cube is = " + result);
             Console.ReadLine();
 
         }
+            
 
-        static void getSquareRoot(Double squareValue)
-        {
-            Double result = 0;
-            result = Math.Sqrt(squareValue);
-            Console.WriteLine(squareValue + " Squre root is = " + result);
-            Console.ReadLine();
 
-        }
-    }
+
+
 }
+
+
+
+
+    }
+
