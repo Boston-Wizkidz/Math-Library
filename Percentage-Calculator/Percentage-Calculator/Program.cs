@@ -7,103 +7,146 @@ using System.Threading.Tasks;
 
 namespace Percentage_Calculator
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            //Decimal totalValue = Convert.ToDecimal(args[0]);
-            //Decimal percentage = Convert.ToDecimal(args[1]);
-            //getPercentage(totalValue, percentage);
+            if (args.Length > 0)
+            {
+                if (args[0] == "1")
+                {
+                    // int [] myArray = { 10, 20, 30, 40, 50 };
+                    // Console.WriteLine(myArray[2]);
+                    Decimal totalValue = Convert.ToDecimal(args[1]);
+                    Decimal percentage = Convert.ToDecimal(args[2]);
+                    getPercentage(totalValue, percentage);
+                }
+
+                if (args[0] == "2")
+                {
+                    Double squreValue = Convert.ToDouble(args[1]);
+                    getSquareRoot(squreValue);
+                }
+
+                if (args[0] == "3")
+                {
+                    Double value = Convert.ToDouble(args[1]);
+                    getCube(value);
+                }
 
 
-            //Double squreValue = Convert.ToDouble(args[0]);
-            //getSquareRoot(squreValue);
+                if (args[0] == "4")
+                {
+                    Double value = Convert.ToDouble(args[1]);
+                    Double divisorvalue = Convert.ToDouble(args[2]);
+                    getdivision(value, divisorvalue);
+                }
+
+                if (args[0] == "5")
+                {
+                    Double value = Convert.ToDouble(args[1]);
+                    Double factorvalue = Convert.ToDouble(args[2]);
+                    getmultiplication(value, factorvalue);
+                }
 
 
+                if (args[0] == "6")
+                {
+                    Double count = Convert.ToDouble(args[1]);
+                    Double Tablestart = Convert.ToDouble(args[2]);
+                    gettables(count, Tablestart);
+                }
 
-            //Double value = Convert.ToDouble(args[0]);
-            // getCube(value);
+                if (args[0] == "7")
+                {
+                    Double value = Convert.ToDouble(args[1]);
+                    Double subtractionvalue = Convert.ToDouble(args[2]);
+                    getdifference(value, subtractionvalue);
+                }
 
-            //Double value = Convert.ToDouble(args[0]);
-            //Double divisorvalue = Convert.ToDouble(args[1]);
-            //getdivision(value, divisorvalue);
 
-            //Double factorvalue = Convert.ToDouble(args[0]);
-            //Double value = Convert.ToDouble(args[1]);
-            //getmultiplication(value, factorvalue);
+                if (args[0] == "8")
+                {
+                    Double value = Convert.ToDouble(args[1]);
+                    Double value1 = Convert.ToDouble(args[2]);
+                    getAddition(value, value1);
+                }
 
-            //Double count = Convert.ToDouble(args[0]);
-            //Double Tablestart = Convert.ToDouble(args[1]);
-            //gettables(count, Tablestart);
 
-            //Double subtractionvalue = Convert.ToDouble(args[0]);
-            //Double value1 = Convert.ToDouble(args[1]);
-            //getdifference(subtractionvalue, value1);
+            }
+            else
+            {
+                Console.WriteLine("Please Enter Values In Following Formatt: Operation Name Value1 Value2. \n");
+                Console.WriteLine(" Below are the Operation Names: \n");
+                Console.WriteLine(" Please Enter A Number by Your Choice:\n" +
+                    " 1 = Percentage Calculator \n" + " 2 = Squareroot Calculator, \n" + " 3 = Cube Calculator \n" + " 4 = Division Calculator \n" +
+                    " 5 = Multiplication Calculator \n" + " 6 = Tables Calculator \n" + " 7 = Subtraction Calculator \n" + " 8 = Addition Calculator \n");
+                
 
-            Double value = Convert.ToDouble(args[0]);
-            Double value1 = Convert.ToDouble(args[1]);
-            getAddition(value, value1);
+
+            }
         }
 
 
-        //static void getPercentage(Decimal totalValue, Decimal percentage)
-        // {
-        // Decimal result = 0;
-        //result = (percentage * totalValue) / 100;
-        //Console.WriteLine(percentage + "percentage of " + totalValue + " is = $" + result);
-        // Console.ReadLine();
+        static void getPercentage(Decimal totalValue, Decimal percentage)
+        {
+        Decimal result = 0;
+        result = (percentage * totalValue) / 100;
+        Console.WriteLine(percentage + "percentage of " + totalValue + " is = $" + result);
+        Console.ReadLine();
 
-        // }
-        // static void getSquareRoot(Double squareValue)
-        //{
-        //Double result = 0;
-        // result = Math.Sqrt(squareValue);
-        //Console.WriteLine(squareValue + " Squre root is = " + result);
-        // Console.ReadLine();
+        }
+        static void getSquareRoot(Double squareValue)
+        {
+        Double result = 0;
+        result = Math.Sqrt(squareValue);
+        Console.WriteLine(squareValue + " Squre root is = " + result);
+        Console.ReadLine();
 
-        //}
-        // static void getCube(Double value)
-        //{
-        // Double result = 0;
-        // result = value * value * value;
-        // Console.WriteLine(" You entered : " + value + " and the cube of " + value + " is =" + result);
-        //Console.ReadLine();
+        }
 
-        //}
-        // static void getdivision(Double value, Double divisorvalue)
-        // {
-        //Double result = 0;
-        // result = (value / divisorvalue);
-        // Console.WriteLine("You questioned me what is  " + value + " divided by " + divisorvalue + " and the answer is = " + result);
-        //Console.ReadLine();
-        //}
+        static void getCube(Double value)
+        {
+        Double result = 0;
+        result = value * value * value;
+        Console.WriteLine(" You entered : " + value + " and the cube of " + value + " is =" + result);
+        Console.ReadLine();
 
-        // static void getmultiplication(Double value, Double factorvalue)
-        //{
-        // Double result = 0;
-        //result = (factorvalue * value);
-        // Console.WriteLine("You questioned me what is " + factorvalue + " multiplied by " + value + " and the answer is = " + result);
-        //Console.ReadLine();
-        //}
+        }
+        static void getdivision(Double value, Double divisorvalue)
+        {
+        Double result = 0;
+        result = (value / divisorvalue);
+        Console.WriteLine("You questioned me what is  " + value + " divided by " + divisorvalue + " and the answer is = " + result);
+        Console.ReadLine();
+        }
 
-
-        //static void gettables(Double count, Double Tablestart)
-        // {
-        //Double Count = 0;
-        //Double TablValue = Tablestart; 
-        //while (count < 10)
-        //{
-        //Console.WriteLine(Tablestart + " X " + count + " = " + TablValue);
-        //TablValue = TablValue + Tablestart;
-        // count = count + 1;
-        //}
+        static void getmultiplication(Double value, Double factorvalue)
+        {
+        Double result = 0;
+        result = (factorvalue * value);
+        Console.WriteLine("You questioned me what is " + factorvalue + " multiplied by " + value + " and the answer is = " + result);
+        Console.ReadLine();
+        }
 
 
+        static void gettables(Double count, Double Tablestart)
+        {
+            Double Count = 0;
+            Double TablValue = Tablestart;
+            while (count < 10)
+            {
+                Console.WriteLine(Tablestart + " X " + count + " = " + TablValue);
+                TablValue = TablValue + Tablestart;
+                count = count + 1;
+            }
+
+        }
         static void getdifference(Double subtractvalue, Double value1)
         {
             Double result = 0;
             result = (subtractvalue - value1);
-            Console.WriteLine("You questioned me what is " + subtractvalue + " subtracted by " + value1 + " and the answer is = ");
+            Console.WriteLine("You questioned me what is " + subtractvalue + " subtracted by " + value1 + " and the answer is = " + result);
             Console.ReadLine();
 
         }
