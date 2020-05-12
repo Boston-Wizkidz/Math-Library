@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MathLib;
 
 
 namespace Percentage_Calculator
 {
     public class Program
     {
-        static void Main(string[] args)
+        static AddSubstract addsub = new AddSubstract();
+        static MultiplyDivide multdiv = new MultiplyDivide();
+        public static void Main(string[] args)
         {
+            
             if (args.Length > 0)
             {
                 if (args[0] == "1")
@@ -85,10 +89,11 @@ namespace Percentage_Calculator
 
 
             }
+             
         }
 
 
-        static void getPercentage(Decimal totalValue, Decimal percentage)
+        public static void getPercentage(Decimal totalValue, Decimal percentage)
         {
         Decimal result = 0;
         result = (percentage * totalValue) / 100;
@@ -96,7 +101,7 @@ namespace Percentage_Calculator
         Console.ReadLine();
 
         }
-        static void getSquareRoot(Double squareValue)
+        public static void getSquareRoot(Double squareValue)
         {
         Double result = 0;
         result = Math.Sqrt(squareValue);
@@ -105,7 +110,7 @@ namespace Percentage_Calculator
 
         }
 
-        static void getCube(Double value)
+        public static void getCube(Double value)
         {
         Double result = 0;
         result = value * value * value;
@@ -113,24 +118,26 @@ namespace Percentage_Calculator
         Console.ReadLine();
 
         }
-        static void getdivision(Double value, Double divisorvalue)
+        public static void getdivision(Double value, Double divisorvalue)
         {
         Double result = 0;
-        result = (value / divisorvalue);
-        Console.WriteLine("You questioned me what is  " + value + " divided by " + divisorvalue + " and the answer is = " + result);
+            //result = (value / divisorvalue);
+            result = multdiv.Divide(value, divisorvalue);
+            Console.WriteLine("You questioned me what is  " + value + " divided by " + divisorvalue + " and the answer is = " + result);
         Console.ReadLine();
         }
 
-        static void getmultiplication(Double value, Double factorvalue)
+        public static void getmultiplication(Double value, Double factorvalue)
         {
         Double result = 0;
-        result = (factorvalue * value);
-        Console.WriteLine("You questioned me what is " + factorvalue + " multiplied by " + value + " and the answer is = " + result);
+            //result = (factorvalue * value);
+            result = multdiv.Multiply(value, factorvalue);
+            Console.WriteLine("You questioned me what is " + factorvalue + " multiplied by " + value + " and the answer is = " + result);
         Console.ReadLine();
         }
 
 
-        static void gettables(Double count, Double Tablestart)
+        public static void gettables(Double count, Double Tablestart)
         {
             Double Count = 0;
             Double TablValue = Tablestart;
@@ -142,20 +149,22 @@ namespace Percentage_Calculator
             }
 
         }
-        static void getdifference(Double subtractvalue, Double value1)
+        public static void getdifference(Double subtractvalue, Double value1)
         {
             Double result = 0;
-            result = (subtractvalue - value1);
+            //result = (subtractvalue - value1);
+            result = addsub.Subtract(subtractvalue, value1);
             Console.WriteLine("You questioned me what is " + subtractvalue + " subtracted by " + value1 + " and the answer is = " + result);
             Console.ReadLine();
 
         }
 
 
-        static void getAddition(Double value, Double value1)
+        public static void getAddition(Double value, Double value1)
         {
             Double result = 0;
-            result = (value + value1);
+            //result = (value + value1);
+            result = addsub.Add(value, value1);
             Console.WriteLine(value + " + " + value1 + " = " + result);
             Console.ReadLine();
 

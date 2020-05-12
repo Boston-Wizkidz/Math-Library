@@ -84,6 +84,10 @@
       <Project>{3e931cd1-361f-4c16-903b-b65191739b56}</Project>
       <Name>MathLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Percentage-Calculator\Percentage-Calculator.csproj">
+      <Project>{3f357f12-84c7-424d-8674-369fed4356d1}</Project>
+      <Name>Percentage-Calculator</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
