@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math-Calculator", "Math-Cal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathLib", "ClassLibrary1\MathLib.csproj", "{3E931CD1-361F-4C16-903B-B65191739B56}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometricAreaCalculator", "GeometricAreaCalculator\GeometricAreaCalculator.csproj", "{21DD0E44-9C90-4AAF-8840-0F4B2FF32494}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3E931CD1-361F-4C16-903B-B65191739B56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E931CD1-361F-4C16-903B-B65191739B56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E931CD1-361F-4C16-903B-B65191739B56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21DD0E44-9C90-4AAF-8840-0F4B2FF32494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21DD0E44-9C90-4AAF-8840-0F4B2FF32494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21DD0E44-9C90-4AAF-8840-0F4B2FF32494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21DD0E44-9C90-4AAF-8840-0F4B2FF32494}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

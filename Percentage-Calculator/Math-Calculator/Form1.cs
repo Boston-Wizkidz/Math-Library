@@ -61,7 +61,7 @@ namespace Math_Calculator
             firstValue = Convert.ToDouble(txtFirstvalue.Text);
             secondValue = Convert.ToDouble(txtSecondvalue.Text);
             //result = (firstValue * secondValue);
-             result = multdiv.Multiply(firstValue, secondValue);
+            result = multdiv.Multiply(firstValue, secondValue);
             txtResult.Text = result.ToString();
 
         }
