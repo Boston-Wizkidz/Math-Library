@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MathLib;
 
 namespace GeometricAreaCalculator
 {
@@ -17,9 +18,14 @@ namespace GeometricAreaCalculator
         Double RactWidth = 0;
         Double Radius = 0;
         Double Pi = 3.14;
+        Double Ciresult = 0;
         Double TriangleBase = 0;
         Double TriangleHeight = 0;
+        Double Tri2 = 2;
+        Double Triresult = 0;
         Double result = 0;
+        AddSubstract addsub = new AddSubstract();
+        MultiplyDivide multdiv = new MultiplyDivide();
         public Form1()
         {
             InitializeComponent();
@@ -74,7 +80,7 @@ namespace GeometricAreaCalculator
                 txtSqrLength.Visible = true;
                 btnAreaofSquare.Visible = true;
 
-            }
+            }   
 
 
 
@@ -83,7 +89,10 @@ namespace GeometricAreaCalculator
         private void button1_Click(object sender, EventArgs e)
         {
             Radius = Convert.ToDouble(txtRadius.Text);
-            result = (Radius * Radius * Pi);
+            //result = (Radius * Radius * Pi);
+            result = multdiv.Multiply(Radius, Radius);
+            Ciresult = multdiv.Multiply(Radius, Radius);
+            result = multdiv.Multiply(Ciresult, Pi);
             txtResult.Text = result.ToString();
         }
         
@@ -109,7 +118,8 @@ namespace GeometricAreaCalculator
         {
             RactLength = Convert.ToDouble(txtRactLength.Text);
             RactWidth = Convert.ToDouble(txtRactWidth.Text);
-            result = (RactLength * RactWidth);
+            //result = (RactLength * RactWidth);
+            result = multdiv.Multiply(RactLength, RactWidth);
             txtResult.Text = result.ToString();
         }
 
@@ -121,25 +131,20 @@ namespace GeometricAreaCalculator
         private void btnAreaofSquare_Click(object sender, EventArgs e)
         {
             SqrLength = Convert.ToDouble(txtSqrLength.Text);
-            result = (SqrLength * SqrLength);
+            //result = (SqrLength * SqrLength);
             txtResult.Text = result.ToString();
-
+            result = multdiv.Multiply(SqrLength, SqrLength);
         }
 
         private void btnAreaofTriangle_Click(object sender, EventArgs e)
         {
             TriangleBase = Convert.ToDouble(txtTriangleBase.Text);
             TriangleHeight = Convert.ToDouble(txtTriangleHeight.Text);
-            result = (TriangleBase / 2 * TriangleHeight);
+            //result = (TriangleBase / Tri2 * TriangleHeight);
+            result = multdiv.Divide(TriangleBase, Tri2);
+            Triresult = multdiv.Divide(TriangleBase, Tri2);
+            result = multdiv.Multiply(Triresult, TriangleHeight);
             txtResult.Text = result.ToString();
-        }
-
-        private void btnClearall_Click(object sender, EventArgs e)
-        {
-
-
-            txtResult.Text = "0";
-
         }
     }
 }
